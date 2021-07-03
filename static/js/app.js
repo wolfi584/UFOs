@@ -24,14 +24,15 @@ function buildTable(data) {
 }
 
 // 1. Create a variable to keep track of all the filters as an object.
-
 var filtersArray = [];
 
 // 3. Use this function to update the filters. 
 function updateFilters() {
   
+  // DE: added Debug to console.log for verification
     console.log("filter1");
     // 4a. Save the element that was changed as a variable.
+    //  DE: added a filterArray val for each property("value")
     filtersArray[0] = d3.select("#datetime").property("value"); //date
     filtersArray[1] = d3.select("#state").property("value"); // state
     filtersArray[2] = d3.select("#city").property("value"); // city
@@ -51,14 +52,17 @@ function updateFilters() {
     console.log(filtersArray[4]);
 
     // 4b. Save the value that was changed as a variable.
+    // DE: N/A
+    
     // 4c. Save the id of the filter that was changed as a variable.
+    // DE: N/A
+
     // 5. If a filter value was entered then add that filterId and value
     // to the filters list. Otherwise, clear that filter from the filters object.
-  
+    // DE: N/A
+    
     // 6. Call function to apply all filters and rebuild the table
-  
     filterTable(filtersArray);
-
   }
   
   // 7. Use this function to filter the table when data is entered.
@@ -69,6 +73,7 @@ function updateFilters() {
   
     // 9. Loop through all of the filters and keep any data that
     // matches the filter values
+    // DE: Using if() and .filter - loop was not nessesary
     
   if(filtersArray[0])
     filteredData = filteredData.filter(row => row.datetime === filtersArray[0]);
@@ -86,7 +91,7 @@ function updateFilters() {
   }
   
   // 2. Attach an event to listen for changes to each filter
-  
-  
+  // DE: Added to the onkeyup="updateFilters() to each input box.
+
   // Build the table when the page loads
   buildTable(tableData);
