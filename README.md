@@ -1,14 +1,14 @@
 # UFOs
 
-##Overview
+## Overview
 The purpose of this analysis is to provide an enhanced report of UFO sightings. This will be accomplished by adding an attribute to the webpage, enabeling users to simultaneously search  for different criteria. Using JavaScript and HTML, I will edit the code in the index.html file to add more filters. I will also be adding filters for city, state, country and shape.
 
-##Results
+## Results
 ! []
 
 
 
-##Summary
+## Summary
 
 
 
